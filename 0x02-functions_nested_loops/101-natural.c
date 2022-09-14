@@ -1,51 +1,29 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_times_table - print multiplication table up to n
- * @n: integer argument
+ * main - natural numbers multiples of 3 or 5 to 1024
+ *
+ * Return: always 0
  */
 
-void print_times_table(int n)
+int main(void)
 {
-	int row;
-	int column;
-	int product;
+	int s, t, f, tm, fm;
 
-if (n >= 0 && n <= 15)
-{
-	for (row = 0; row <= n; row++)
+	s = 0;
+	for (t = 0; t <= (1024 / 3); t++)
 	{
-		for (column = 0; column <= n; column++)
-		{
-			product = (row * column);
-			if (column == 0)
-
-				_putchar('0' + product);
-			else
-			{
-				_putchar(',');
-				_putchar(' ');
-				if (product <= 9)
-				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar('0' + product);
-				}
-				else if (product > 9 && product < 100)
-				{
-					_putchar(' ');
-					_putchar('0' + (product / 10));
-					_putchar('0' + (product % 10));
-				}
-				else if (product >= 100)
-				{
-					_putchar('0' + (product / 100));
-					_putchar('0' + ((product / 10) % 10));
-					_putchar('0' + (product % 10));
-				}
-			}
-		}
-			_putchar('\n');
+		tm = 3 * t;
+		s = s + tm;
 	}
-}
+	for (f = 0; f <= (1024 / 5); f++)
+	{
+		if (!(f % 3 == 0))
+		{
+			fm = 5 * f;
+			s = s + fm;
+		}
+	}
+	printf("%i\n", s);
+	return (0);
 }
