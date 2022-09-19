@@ -5,8 +5,9 @@
  * @s: string
  * Return: length
  */
+
 int _strlen(char *s)
-{ 
+{
 	int l = 0;
 
 	while (*s != '\0')
@@ -16,7 +17,6 @@ int _strlen(char *s)
 	}
 
 	return (l);
-
 }
 
 /**
@@ -29,7 +29,7 @@ void puts2(char *str)
 	int b;
 
 	for (b = 0; str[b] != '\0' && b < _strlen(str); b += 2)
-		putchar(str[b]);
+		_putchar(str[b]);
 
 	_putchar('\n');
-}	
+}
