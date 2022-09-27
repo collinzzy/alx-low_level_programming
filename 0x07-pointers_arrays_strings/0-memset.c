@@ -7,10 +7,10 @@
  * @n: number of byte to fill
  * Return: memory area
  */
-
 char *_memset(char *s, char b, unsigned int n)
 {
 	int size = n; /* accept +ve no. */
+
 
 	if (size > 0)
 	{
